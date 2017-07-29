@@ -14,22 +14,42 @@
  * @subpackage ThemeInit
  */
 
-// add parent style
+/*******************************************add parent style **************************/
 
-add_action( 'wp_enqueue_scripts', 'enqueue_parent_styles' );
+add_action( 'wp_enqueue_scripts', 'twentysixteen_child_scripts' );
 
-function enqueue_parent_styles() {
-   wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+function twentysixteen_child_scripts()
+{
+	wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+	
+	// added extra ie9 css classes
+	wp_enqueue_style( 'twentysixteen-ie', get_stylesheet_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20160816' );
+	wp_style_add_data( 'twentysixteen-ie', 'conditional', 'lt IE 10' );
 }
 
-// add font family url
+/*******************************************add font family url **************************/ 
 
-add_filter( 'twentysixteen_fonts_url', 'twentysixteen_child_fonts_url' );
-
-function twentysixteen_child_fonts_url(){
+function twentysixteen_fonts_url() {
 	$fonts_url = '';
 	$fonts     = array();
 	$subsets   = 'latin,latin-ext';
+
+	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
+		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Montserrat, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Montserrat font: on or off', 'twentysixteen' ) ) {
+		$fonts[] = 'Montserrat:400,700';
+	}
+
+	/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
+	if ( 'off' !== _x( 'on', 'Inconsolata font: on or off', 'twentysixteen' ) ) {
+		$fonts[] = 'Inconsolata:400';
+	}
+
+		/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentysixteen' ) ) {
 		$fonts[] = 'Open Sans';
 	}

@@ -19,13 +19,6 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
-	<!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> -->
-	<style type="text/css">
-    <!--[if gte IE 9] <style type="text/css"> .gradient {
-        filter: none;
-    }
-    </style>
-  <![endif]-->
 </head>
 
 <body <?php body_class(); ?>>
