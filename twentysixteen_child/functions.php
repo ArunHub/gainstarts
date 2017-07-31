@@ -35,7 +35,7 @@ function twentysixteen_fonts_url() {
 	$subsets   = 'latin,latin-ext';
 
 	/* translators: If there are characters in your language that are not supported by Merriweather, translate this to 'off'. Do not translate into your own language. */
-	if ( 'off' !== _x( 'on', 'Merriweather font: on or off', 'twentysixteen' ) ) {
+	if ( 'off' !== _x( 'off', 'Merriweather font: on or off', 'twentysixteen' ) ) {
 		$fonts[] = 'Merriweather:400,700,900,400italic,700italic,900italic';
 	}
 
@@ -54,6 +54,10 @@ function twentysixteen_fonts_url() {
 		$fonts[] = 'Open Sans';
 	}
 
+	if ( 'off' !== _x( 'on', 'Patua One: on or off', 'twentysixteen' ) ) {
+		$fonts[] = 'Patua One';
+	}
+
 	if ( $fonts ) {
 		$fonts_url = add_query_arg( array(
 			'family' => urlencode( implode( '|', $fonts ) ),
@@ -63,3 +67,13 @@ function twentysixteen_fonts_url() {
 
 	return $fonts_url;
 }
+
+/***************************upload svg like security restricted function *****************************8*/
+function custom_upload_mimes( $existing_mimes=array() ) {
+	// add svg to the list of mime types
+	$existing_mimes['svg'] = 'image/svg';
+
+	// return the array back to the function with our added mime type
+	return $existing_mimes;
+}
+add_filter( 'upload_mimes', 'custom_upload_mimes' );

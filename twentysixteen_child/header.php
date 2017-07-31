@@ -22,11 +22,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php include_once('svg_defs.php'); ?>
+<?php include('svg_defs.php'); ?>
 <div id="page" class="site">
-	<div class="site-inner">
-		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
-
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-header-main">
 				<div class="site-branding">
@@ -42,6 +39,37 @@
 					if ( $description || is_customize_preview() ) : ?>
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
+
+					<ul class="list-inline social-icons">
+            <li>
+                <a href="#">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <use xlink:href="#icon-fb"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="#icon-gplus"></use>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <svg>
+                        <use xlink:href="#icon-skype"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
 				</div><!-- .site-branding -->
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
@@ -76,6 +104,8 @@
 				<?php endif; ?>
 			</div><!-- .site-header-main -->
 
+		</header><!-- .site-header -->
+			<?php if ( is_front_page() ) { ?>
 			<?php if ( get_header_image() ) : ?>
 				<?php
 					/**
@@ -90,11 +120,17 @@
 					$custom_header_sizes = apply_filters( 'twentysixteen_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px' );
 				?>
 				<div class="header-image">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> </a> -->
+            <div class="hero-heading">
+                <p id="bestway">You have reached where best way to learn forex and earn money</p>
+                <h2 id="learn-forex">LEARN <span>FOREX</span></h2>
+            </div>
 						<img src="<?php header_image(); ?>" srcset="<?php echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php echo esc_attr( $custom_header_sizes ); ?>" width="<?php echo esc_attr( get_custom_header()->width ); ?>" height="<?php echo esc_attr( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-					</a>
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
-		</header><!-- .site-header -->
+			<?php } ?>
+
+		<div class="site-inner">
+		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 
 		<div id="content" class="site-content">

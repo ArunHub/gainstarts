@@ -56,5 +56,14 @@
 </div><!-- .site -->
 
 <?php wp_footer(); ?>
+<script type="text/javascript">
+window.onload = function() {
+
+    document.getElementById('bestway').style.transform = "translateY(0px)";
+    document.getElementById('bestway').style.opacity = "1";
+    document.getElementById('learn-forex').style.transform = "scale(1)";
+
+};
+</script>
 </body>
 </html>
