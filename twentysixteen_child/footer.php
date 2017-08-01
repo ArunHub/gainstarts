@@ -57,12 +57,15 @@
 
 <?php wp_footer(); ?>
 <script type="text/javascript">
+
+    jQuery(document).ready(function() {
+        jQuery('.scrollfix').scrollToFixed();        
+    });
+
 window.onload = function() {
-
-    document.getElementById('bestway').style.transform = "translateY(0px)";
-    document.getElementById('bestway').style.opacity = "1";
-    document.getElementById('learn-forex').style.transform = "scale(1)";
-
+  document.getElementById('bestway').style.transform = "translateY(0px)";
+  document.getElementById('bestway').style.opacity = "1";
+  document.getElementById('learn-forex').style.transform = "scale(1)";
 };
 </script>
 </body>

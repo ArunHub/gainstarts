@@ -43,7 +43,7 @@
 					<ul class="list-inline social-icons">
             <li>
                 <a href="#">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <svg>
                         <use xlink:href="#icon-fb"></use>
                     </svg>
                 </a>
@@ -70,12 +70,13 @@
                 </a>
             </li>
         </ul>
+        <div class="phone-no"><svg><use xlink:href="#icon-mobile-phone"></use></svg><span>09789815166</span></div>
 				</div><!-- .site-branding -->
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
 					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
 
-					<div id="site-header-menu" class="site-header-menu">
+					<div id="site-header-menu" class="site-header-menu scrollfix">
 						<?php if ( has_nav_menu( 'primary' ) ) : ?>
 							<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e( 'Primary Menu', 'twentysixteen' ); ?>">
 								<?php

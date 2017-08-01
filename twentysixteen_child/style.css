@@ -338,15 +338,15 @@ body:not(.custom-background-image):after{
 
 .social-icons li a {
 	display: block;
-	width: 30px;
-	height: 30px;
+	width: 20px;
+	height: 20px;
 	box-shadow: none;
 }
 
 .social-icons li a svg {
 	transition: all 0.3s ease;
-	width:30px;
-	height:30px;
+	width:20px;
+	height:20px;
 }
 
 .social-icons li a:hover svg {
@@ -488,6 +488,16 @@ body:not(.custom-background-image):after{
 	padding: 0;
 }
 /*************************** site content ********************/
+
+.phone-no{
+	float: right;
+}
+
+.phone-no svg{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+}
 
 #whatforex p img {
   float: left;
