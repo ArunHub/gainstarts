@@ -40,37 +40,39 @@
 						<p class="site-description"><?php echo $description; ?></p>
 					<?php endif; ?>
 
-					<ul class="list-inline social-icons">
-            <li>
-                <a href="#">
-                    <svg>
-                        <use xlink:href="#icon-fb"></use>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg>
-                        <use xlink:href="#icon-twitter"></use>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg>
-                        <use xlink:href="#icon-gplus"></use>
-                    </svg>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <svg>
-                        <use xlink:href="#icon-skype"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-        <div class="phone-no"><svg><use xlink:href="#icon-mobile-phone"></use></svg><span>09789815166</span></div>
+					<div class="social-icons">	
+						<ul>
+		            <li>
+		                <a href="#">
+		                    <svg>
+		                        <use xlink:href="#icon-fb"></use>
+		                    </svg>
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <svg>
+		                        <use xlink:href="#icon-twitter"></use>
+		                    </svg>
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <svg>
+		                        <use xlink:href="#icon-gplus"></use>
+		                    </svg>
+		                </a>
+		            </li>
+		            <li>
+		                <a href="#">
+		                    <svg>
+		                        <use xlink:href="#icon-skype"></use>
+		                    </svg>
+		                </a>
+		            </li>
+		        </ul>
+	        	<div class="phone-no"><svg><use xlink:href="#icon-mobile-phone"></use></svg><span>09789815166</span></div>
+        </div>
 				</div><!-- .site-branding -->
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>

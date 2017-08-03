@@ -169,6 +169,7 @@ ul.list-block li:before {
 
 .board .board__body .strong {
   color: #285943;
+  text-shadow: none;
 }
 
 .board .btn-prime {
@@ -219,6 +220,8 @@ table tbody tr td:not(:last-child) {
 
 .strong {
   font-weight: bold;
+  text-shadow: 3px 3px 12px #de034e;
+  color: #9ac235;
 }
 
 /*  btns  */
@@ -328,7 +331,10 @@ body:not(.custom-background-image):after{
 }
 
 .social-icons{
-	float: right;
+	float: right;	
+}
+
+.social-icons ul {
 	margin: 0;
 }
 
@@ -490,13 +496,19 @@ body:not(.custom-background-image):after{
 /*************************** site content ********************/
 
 .phone-no{
-	float: right;
+	margin-top: 30px;
 }
 
 .phone-no svg{
-	display: inline-block;
-	width: 30px;
 	height: 30px;
+	width: 30px;
+	margin-right: 5px;
+}
+
+.phone-no span,
+.phone-no svg {
+	display: inline-block;
+	vertical-align: middle;
 }
 
 #whatforex p img {
