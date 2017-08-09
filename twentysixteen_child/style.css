@@ -44,13 +44,13 @@ Version: 2.0
   font-size: 1.3rem;
 }
 
-section h2 {
-  color: #97d2ff;
-}
-
+section h2,
 section h3,
  section h4,
-  section h5,
+  section h5 {
+  color: #9acd32;
+}
+
    section p,
     section figcaption {
   color: white;
@@ -136,6 +136,14 @@ ul.list-block li:before {
   background: white;
   margin-bottom: 2rem;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  position: relative;
+  z-index: auto;
+  transform: scale(1);
+}
+
+.board:hover{
+	transform: scale(1.2);
 }
 
 .board .board__head {
@@ -182,40 +190,56 @@ ul.list-block li:before {
   padding: 0.5rem;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  border: 1px solid #ccc;
-  background: white;
+.subscribe-table{
+	display: flex;
+	
 }
 
-table thead tr {
+.subscribe-table .subblock{
+	flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-right: 1px solid #ccc;
+  transition: transform 0.3s ;
+  transform: scale(1);
+  background: white;
+  position: relative;
+  z-index: 10;
+}
+
+.subscribe-table .subblock:hover{
+	transform: scale(1.2);
+	z-index: 20;
+	border-right: 0;
+}
+
+.subscribe-table .subblock span{
+	flex: 1 1 auto;
+}
+
+.subscribe-table .subblock span .btn{
+	width: 100%;
+}
+
+.subscribe-table .subblock .name{
+	font-weight: bold;
+  padding: 0.8rem 0;
   background: crimson;
   color: white;
 }
 
-table thead tr th {
-  font-weight: bold;
-  padding: 0.8rem 0;
-  text-align: center;
+.subscribe-table .subblock .price,
+.subscribe-table .subblock .paynow{
+	padding: 1rem;
 }
 
-table tbody tr {
-  border-top: 1px solid #ccc;
+.subscribe-table .subblock .paynow{
+	border-top: 1px solid #ccc;
 }
 
-table tbody tr:first-child {
-  font-size: 2rem;
-  color: #285943;
-}
-
-table tbody tr td {
-  text-align: center;
-  padding: 1rem;
-}
-
-table tbody tr td:not(:last-child) {
-  border-right: 1px solid #ccc;
+.subscribe-table .subblock .price{
+	font-size: 2rem;
 }
 
 .strong {
