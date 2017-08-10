@@ -47,7 +47,24 @@
 					 */
 					do_action( 'twentysixteen_credits' );
 				?>
-				&copy; 2009 – <?php echo date('Y'); ?>
+				<div class="full-row footericons">
+					<div class="col-1">
+						<svg><use xlink:href="#icon-visit"></use></svg>
+            <p>Moolakadai</p>
+					</div>
+					<div class="col-1">
+						<svg><use xlink:href="#icon-phonecall"></use></svg>
+            <p>1-800-000-0000</p>
+					</div>
+					<div class="col-1">
+						<svg><use xlink:href="#icon-mail"></use></svg>
+            <p><a href="mailto:support@veltrade.com">support@veltrade.com</a></p>
+					</div>
+					<div class="col-1">
+						<svg><use xlink:href="#icon-copyright"></use></svg>
+            <p>&copy; 2009 – <?php echo date('Y'); ?></p>
+					</div>
+				</div>				
 				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> | All Rights Reserved.</span> 
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->

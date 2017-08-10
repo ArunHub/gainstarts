@@ -70,7 +70,7 @@ function twentysixteen_fonts_url() {
 	return $fonts_url;
 }
 
-/***************************upload svg like security restricted function *****************************8*/
+/***************************upload svg like security restricted function ******************************/
 function custom_upload_mimes( $existing_mimes=array() ) {
 	// add svg to the list of mime types
 	$existing_mimes['svg'] = 'image/svg';
@@ -79,3 +79,17 @@ function custom_upload_mimes( $existing_mimes=array() ) {
 	return $existing_mimes;
 }
 add_filter( 'upload_mimes', 'custom_upload_mimes' );
+
+/***************************display content for registered users******************************/
+function show_reg_users_shortcode( $atts, $content = null ) {
+	if ( is_user_logged_in() ) {
+	  return do_shortcode($content);
+	} else {
+	  return 'Welcome, visitor! Please login to view the content'.'<a href="http://localhost/veltrade/wp-login.php">Log in</a>';
+	};
+}
+add_shortcode( 'show_users', 'show_reg_users_shortcode' );
+
+
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
