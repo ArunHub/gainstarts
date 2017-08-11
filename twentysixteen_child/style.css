@@ -539,6 +539,12 @@ body:not(.custom-background-image):after {
     margin: 0 auto;
     font-size: 1rem;
     color: white;
+    width: 100%;
+    text-align: center;
+}
+
+.site-info a{
+	color: #007acc;
 }
 
 .entry-header {
@@ -706,6 +712,10 @@ body:not(.custom-background-image):after {
 
 .contact-form .social-icons {
     float: none;
+}
+
+.footericons{
+	margin-bottom: 1rem;
 }
 
 .footericons svg{

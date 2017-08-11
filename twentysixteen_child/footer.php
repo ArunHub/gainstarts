@@ -62,10 +62,10 @@
 					</div>
 					<div class="col-1">
 						<svg><use xlink:href="#icon-copyright"></use></svg>
-            <p>&copy; 2009 – <?php echo date('Y'); ?></p>
+            <p>&copy; 2009 – <?php echo date('Y'); ?> All Rights Reserved.</p>
 					</div>
 				</div>				
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a> | All Rights Reserved.</span> 
+				<!-- <span class="site-title"><a href="<?php # echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php # bloginfo( 'name' ); ?></a></span>  -->
 				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a>
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
