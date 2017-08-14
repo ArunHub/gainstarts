@@ -250,6 +250,7 @@ ul.list-block li:before {
 }
 
 
+
 /*  btns  */
 
 .btn {
@@ -289,14 +290,15 @@ ul.list-block li:before {
     margin-left: -1rem;
 }
 
-.full-row{
-	    display: flex;
+.full-row {
+    display: flex;
     flex-wrap: wrap;
     align-items: stretch;
 }
 
-.full-row .col-1{
-	-webkit-flex: auto; flex: auto;
+.full-row .col-1 {
+    -webkit-flex: auto;
+    flex: auto;
 }
 
 .row .col {
@@ -345,6 +347,7 @@ h3.accordion-title {
     padding: 10px;
     border-radius: 5px;
 }
+
 
 
 
@@ -539,12 +542,14 @@ body:not(.custom-background-image):after {
     margin: 0 auto;
     font-size: 1rem;
     color: white;
-    width: 100%;
     text-align: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
 }
 
-.site-info a{
-	color: #007acc;
+.site-info a {
+    color: #007acc;
 }
 
 .entry-header {
@@ -554,6 +559,7 @@ body:not(.custom-background-image):after {
 .site-content {
     padding: 0;
 }
+
 
 
 /*************************** site content ********************/
@@ -714,11 +720,11 @@ body:not(.custom-background-image):after {
     float: none;
 }
 
-.footericons{
-	margin-bottom: 1rem;
+.footericons {
+    margin-bottom: 1rem;
 }
 
-.footericons svg{
-	width: 50px;
-	height: 50px;
+.footericons svg {
+    width: 50px;
+    height: 50px;
 }
