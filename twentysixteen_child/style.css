@@ -140,12 +140,13 @@ ul.list-block li:before {
     box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
     position: relative;
-    z-index: auto;
+    z-index: 10;
     transform: scale(1);
 }
 
 .board:hover {
     transform: scale(1.2);
+    z-index: 20;
 }
 
 .board .board__head {
@@ -201,7 +202,8 @@ ul.list-block li:before {
     display: flex;
     flex-direction: column;
     text-align: center;
-    border-right: 1px solid #ccc;
+    
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s;
     transform: scale(1);
     background: white;
@@ -284,10 +286,10 @@ ul.list-block li:before {
 
 .row {
     display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    margin-right: -1rem;
-    margin-left: -1rem;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
 }
 
 .full-row {
@@ -302,16 +304,16 @@ ul.list-block li:before {
 }
 
 .row .col {
-    flex: 1 1 100%;
-    padding: 0 1em;
+   flex: 1;  
 }
 
 .row .col.col-2 {
     flex: 1 1 50%;
 }
 
-.row .col.col-3 {
-    flex: 1 1 33.3%;
+.row .col-3 {
+    width: 30%;
+  height: 100%;
 }
 
 .row .col.col-4 {
@@ -536,6 +538,7 @@ body:not(.custom-background-image):after {
     padding: 2rem 0;
     color: white;
     background: #1c2438;
+    border-top: 2px solid darkslategray;
 }
 
 .site-info {
@@ -599,6 +602,15 @@ body:not(.custom-background-image):after {
 .fourprinciples figure {
     width: 50%;
     margin: 0 auto 10px;
+}
+
+.fourprinciples figure embed{
+	transition: all 0.3s;
+	transform: scale(1);
+}
+
+.fourprinciples figure embed:hover{
+	transform: scale(1.2);
 }
 
 
@@ -720,11 +732,23 @@ body:not(.custom-background-image):after {
     float: none;
 }
 
-.footericons {
-    margin-bottom: 1rem;
+.footericons p{
+    margin-bottom: 0;
+}
+
+.footericons + a:hover{
+	box-shadow: none;
+	text-decoration: underline;
 }
 
 .footericons svg {
     width: 50px;
     height: 50px;
+    fill: #12A5F4;
+    transition: all 0.3s;
+}
+
+.footericons svg:hover{
+ 		width: 45px;
+ 		fill: #96ca32;
 }
