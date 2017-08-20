@@ -76,8 +76,30 @@
 <script type="text/javascript">
 
     jQuery(document).ready(function() {
-        jQuery('.scrollfix').scrollToFixed();        
+    		//scroll to fixed
+        jQuery('.scrollfix').scrollToFixed({
+            minWidth: 992
+        });
+
+        var menuToggle = jQuery('#menu-toggle'),
+            siteHeaderMenu = jQuery('#site-header-menu');
+
+        if (jQuery(window).width() < 992) {
+            siteHeaderMenu.css('display', 'none');
+            jQuery('.scrollfix').trigger('detach.scrollToFixed');
+        }
+
+        // Menu toggle in mobile
+        menuToggle.on('click', function(eve) {
+            eve.stopPropagation();
+            siteHeaderMenu.toggle();
+            jQuery(document).click(function() {
+                siteHeaderMenu.css('display', 'none');
+            });
+        });
+
     });
+
 
 window.onload = function() {
   document.getElementById('bestway').style.transform = "translateY(0px)";
