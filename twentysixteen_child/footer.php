@@ -93,7 +93,9 @@
         menuToggle.on('click', function(eve) {
             eve.stopPropagation();
             siteHeaderMenu.toggle();
+            menuToggle.toggleClass('open');
             jQuery(document).click(function() {
+            		menuToggle.removeClass('open');
                 siteHeaderMenu.css('display', 'none');
             });
         });

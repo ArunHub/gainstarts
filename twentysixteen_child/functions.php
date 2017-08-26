@@ -53,7 +53,7 @@ function twentysixteen_fonts_url() {
 
 		/* translators: If there are characters in your language that are not supported by Inconsolata, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Open Sans font: on or off', 'twentysixteen' ) ) {
-		$fonts[] = 'Open Sans';
+		$fonts[] = 'Open Sans:300,400,600,700';
 	}
 
 	if ( 'off' !== _x( 'on', 'Patua One: on or off', 'twentysixteen' ) ) {

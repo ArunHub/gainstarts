@@ -76,7 +76,11 @@
 				</div><!-- .site-branding -->
 
 				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-					<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
+					<button id="menu-toggle" class="menu-toggle">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
 
 					<div id="site-header-menu" class="site-header-menu scrollfix">
 						<?php if ( has_nav_menu( 'primary' ) ) : ?>
@@ -123,12 +127,10 @@
 					$custom_header_sizes = apply_filters( 'twentysixteen_custom_header_sizes', '(max-width: 709px) 85vw, (max-width: 909px) 81vw, (max-width: 1362px) 88vw, 1200px' );
 				?>
 				<div class="header-image" style="background: url(<?php header_image(); ?>) no-repeat center;  background-size: cover;">
-					<!-- <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"> </a> -->
             <div class="hero-heading">
                 <p id="bestway">You have reached where best way to learn forex and earn money</p>
                 <h2 id="learn-forex">LEARN <span>FOREX</span></h2>
             </div>
-						<!-- <img src="<?php header_image(); ?>" srcset="<?php # echo esc_attr( wp_get_attachment_image_srcset( get_custom_header()->attachment_id ) ); ?>" sizes="<?php # echo esc_attr( $custom_header_sizes ); ?>" width="<?php # echo esc_attr( get_custom_header()->width ); ?>" height="<?php # echo esc_attr( get_custom_header()->height ); ?>" alt="<?php # echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"> -->
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
 			<?php } ?>

@@ -44,10 +44,12 @@ html {
 
 .entry-content h4 {
     font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .entry-content h5 {
     font-size: 1.3rem;
+    font-weight: 300;
 }
 
 section h2,
@@ -496,6 +498,50 @@ body:not(.custom-background-image):after {
     background: linear-gradient(90deg, #636363 3%, #1c2438 20%, #1c3738 30%, #581f1f 60%, #2b2b2b 90%);
     -webkit-box-shadow: 0 2px 20px -4px rgba(255, 255, 255, 0.24);
             box-shadow: 0 2px 20px -4px rgba(255, 255, 255, 0.24);
+}
+
+.menu-toggle:hover, .menu-toggle:focus {
+  border-color: #78b300;
+}
+
+.menu-toggle.open:hover, .menu-toggle.open:focus {
+  border-color: crimson;
+}
+
+.menu-toggle .bar {
+  -webkit-transition: 550ms;
+  -o-transition: 550ms;
+  transition: 550ms;
+  position: relative;
+  display: block;
+  background: #78b300;
+  border-radius: 2px;
+  width: 18px;
+  height: 2px;
+  margin-bottom: 5px;
+}
+
+.menu-toggle .bar:last-child {
+    margin-bottom: 0px;
+}
+
+.menu-toggle.open .bar:first-child{
+    background: crimson;
+  -webkit-transform: translateY(7px) rotate(-225deg);
+      -ms-transform: translateY(7px) rotate(-225deg);
+      transform: translateY(7px) rotate(-225deg);
+}
+
+
+.menu-toggle.open .bar:last-child{
+    background: crimson;
+  -webkit-transform: translateY(-7px) rotate(225deg);
+      -ms-transform: translateY(-7px) rotate(225deg);
+      transform: translateY(-7px) rotate(225deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+    background: transparent;
 }
 
 .main-navigation {
