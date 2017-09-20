@@ -48,17 +48,17 @@
 					do_action( 'twentysixteen_credits' );
 				?>
 				<div class="full-row footericons">
-					<div class="col-1">
+					<!-- <div class="col-1">
 						<svg><use xlink:href="#icon-visit"></use></svg>
             <p>Moolakadai</p>
-					</div>
+					</div> -->
 					<div class="col-1">
 						<svg><use xlink:href="#icon-phonecall"></use></svg>
-            <p>1-800-000-0000</p>
+            <p>+91-9840456154</p>
 					</div>
 					<div class="col-1">
 						<svg><use xlink:href="#icon-mail"></use></svg>
-            <p><a href="mailto:support@veltrade.com">support@veltrade.com</a></p>
+            <p><a href="mailto:support@veltrade.com">support@gainstarts.com</a></p>
 					</div>
 					<div class="col-1">
 						<svg><use xlink:href="#icon-copyright"></use></svg>
@@ -109,5 +109,19 @@ window.onload = function() {
   document.getElementById('learn-forex').style.transform = "scale(1)";
 };
 </script>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+	var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+	(function(){
+	var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+	s1.async=true;
+	s1.src='https://embed.tawk.to/59ad101ac28eca75e461df63/default';
+	s1.charset='UTF-8';
+	s1.setAttribute('crossorigin','*');
+	s0.parentNode.insertBefore(s1,s0);
+	})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
