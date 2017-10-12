@@ -54,11 +54,15 @@
 					</div> -->
 					<div class="col-1">
 						<svg><use xlink:href="#icon-phonecall"></use></svg>
-            <p>+91-9840456154</p>
+            <p>+91-9789815166</p>
 					</div>
 					<div class="col-1">
 						<svg><use xlink:href="#icon-mail"></use></svg>
             <p><a href="mailto:support@veltrade.com">support@gainstarts.com</a></p>
+					</div>
+					<div class="col-1">
+						<svg><use xlink:href="#icon-support"></use></svg>
+            <p>24/7 working hours</p>
 					</div>
 					<div class="col-1">
 						<svg><use xlink:href="#icon-copyright"></use></svg>
@@ -69,6 +73,7 @@
 				<a href="<?php # echo esc_url( __( 'https://wordpress.org/', 'twentysixteen' ) ); ?>"><?php # printf( __( 'Proudly powered by %s', 'twentysixteen' ), 'WordPress' ); ?></a> -->
 			</div><!-- .site-info -->
 		</footer><!-- .site-footer -->
+			<!-- <div class="text-center"><a id="switch" href="javascript:void(0)">switch to mobile</a></div> -->
 	</div><!-- .site-inner -->
 </div><!-- .site -->
 

@@ -14,11 +14,30 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<?php endif; ?>
 	<?php wp_head(); ?>
+	<script type="text/javascript">
+		var $ = jQuery;
+		$(document).ready(function () {
+			$('#switch').on('click',function () {
+				var switchText = $('#switch').text();
+				var mobileMetaTag = '<meta content="width=1440" name="viewport">';
+				if (switchText === 'switch to mobile') {
+					$('head').append(mobileMetaTag);
+					$(this).text('switch to desktop');
+					// location.reload(true); 
+				}else if(switchText === 'switch to desktop'){
+					$('head meta:last-child').remove();
+					$(this).text('switch to mobile');
+					location.reload(true); 
+				}
+			})
+		})
+	</script>
 </head>
 
 <body <?php body_class(); ?>>
@@ -107,7 +126,7 @@
 		                    <svg>
 		                        <use xlink:href="#icon-mobile-phone"></use>
 		                    </svg>
-		                    <span>09789815166</span>
+		                    <span>+91-9789815166</span>
 		            </li>
 		        </ul>
 	        	<!-- <div class="phone-no"><svg><use xlink:href="#icon-mobile-phone"></use></svg><span>09789815166</span></div> -->
@@ -140,7 +159,6 @@
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
 			<?php } ?>
-
 		<div class="site-inner">
 		<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentysixteen' ); ?></a>
 

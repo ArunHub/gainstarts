@@ -20,7 +20,7 @@ Version: 2.0
 /* common */
 
 html {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .entry-content h1,
@@ -60,11 +60,13 @@ section h5 {
 }
 
 section {
-    padding: 50px 0;
+    padding: 35px 0;
     /*background: url(images/content-bg.png);*/
     background: #0072c6;
     /*background-size: cover;*/
 }
+
+
 
 p {
     margin: 0 0 0.5rem 0;
@@ -110,6 +112,10 @@ embed {
 
 ul {
     list-style: none;
+}
+
+.text-center {
+    text-align: center;
 }
 
 .list-block {
@@ -204,6 +210,10 @@ ul {
     font-weight: 800;
 }
 
+.board__body ul {
+    margin-bottom: 0;
+}
+
 .board .board__body .strong {
     color: #285943;
     text-shadow: none;
@@ -283,7 +293,9 @@ ul {
     color: #9ac235;
 }
 
-
+.green {
+    color: #9ac235;
+}
 
 
 
@@ -361,7 +373,13 @@ ul {
     flex: 1;
 }
 
-.row .col.col-2 {
+.col-nogrow {
+    -webkit-box-flex: 0 0 25%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+}
+
+.row .col-2 {
     -webkit-box-flex: 1;
     -ms-flex: 1 1 50%;
     flex: 1 1 50%;
@@ -453,10 +471,12 @@ body:not(.custom-background-image):after {
     margin: 0 auto !important;
     max-width: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 2px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
+    overflow: unset;
 }
 
 .custom-logo {
@@ -477,11 +497,9 @@ body:not(.custom-background-image):after {
     -webkit-box-shadow: 0 2px 20px -4px rgba(255, 255, 255, 0.24);*/
     background: #313030;
     float:left;
-    padding-top: 20px;
 }
 .social-icons {
     float: left;
-    padding-top: 33px;
 }
 
 .social-icons ul {
@@ -628,6 +646,10 @@ body:not(.custom-background-image):after {
     color: #fff;
 }
 
+.main-navigation ul ul{
+    z-index: 99;
+}
+
 .main-navigation ul ul li {
     background-color: #1c2438;
     border: 1px solid #1c2438;
@@ -697,7 +719,7 @@ body:not(.custom-background-image):after {
 }
 
 .site-footer {
-    padding: 2rem 0;
+    padding: 1rem 0;
     background: #1c2438;
     border-top: 2px solid darkslategray;
 }
@@ -788,6 +810,15 @@ body:not(.custom-background-image):after {
     -webkit-transform: scale(1.2);
     -ms-transform: scale(1.2);
     transform: scale(1.2);
+}
+
+#forex_training h5 {
+    display: inline-block;
+    background: crimson;
+    color: white;
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 6px;
 }
 
 
@@ -881,7 +912,6 @@ body:not(.custom-background-image):after {
 }
 
 .contact-form input[type="email"] {
-    margin-left: 1%;
     display: inline-block;
 }
 

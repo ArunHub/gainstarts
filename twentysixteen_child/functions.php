@@ -91,33 +91,43 @@ function show_reg_users_shortcode( $atts, $content = null ) {
 add_shortcode( 'show_users', 'show_reg_users_shortcode' );
 
 /***************************contact form******************************/
-function add_contact_form_shortcode( $atts) {
-if (isset($_REQUEST['email']) && $_REQUEST['email'] != '' )  {
+// function add_contact_form_shortcode( $atts) {
+// if (isset($_REQUEST['email']) && $_REQUEST['email'] != '' )  {
                 
-                $admin_email = "a3k.11051991@gmail.com";
-                $email = $_REQUEST['email'];
-                $subject = "GainStarts";
+//                 $admin_email = "a3k.11051991@gmail.com";
+//                 $name = $_REQUEST['name'];
+//                 $email = $_REQUEST['email'];
+//                 $message = $_REQUEST['msg'];
+//                 $subject = "GainStarts";
                 
-                $headers  = 'MIME-Version: 1.0' . "\r\n";
-                $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-                $headers .= "From: $email" . "\r\n";
+//                 $headers  = 'MIME-Version: 1.0' . "\r\n";
+//                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
+//                 $headers .= "From: $email" . "\r\n";
                 
 
-                $comment = '<html><body>';
-                $comment .= '<table rules="all" style="border:1px solid #666;" cellpadding="10">';
-                $comment .= "<tr><td style='background: #eee;'><strong>First Name</strong> </td><td>" .$_REQUEST['name']. "</td></tr>";
-                $comment .= "<tr><td style='background: #eee;'><strong>Email number</strong> </td><td>" .$_REQUEST['email']. "</td></tr>";
-                $comment .= "<tr><td style='background: #eee;'><strong>Messsage</strong> </td><td>" .$_REQUEST['msg']. "</td></tr>";
-                $comment .= "</table>";
-                $comment .= "</body></html>";
+//                 $comment = '<html><body>';
+//                 $comment .= '<table rules="all" style="border:1px solid #666;" cellpadding="10">';
+//                 $comment .= "<tr><td style='background: #eee;'><strong>First Name</strong> </td><td>" .$_REQUEST['name']. "</td></tr>";
+//                 $comment .= "<tr><td style='background: #eee;'><strong>Email number</strong> </td><td>" .$_REQUEST['email']. "</td></tr>";
+//                 $comment .= "<tr><td style='background: #eee;'><strong>Messsage</strong> </td><td>" .$_REQUEST['msg']. "</td></tr>";
+//                 $comment .= "</table>";
+//                 $comment .= "</body></html>";
                 
-                echo "string";
-                mail($admin_email, $subject, $comment, $headers);
+//                 //establish connection
+// 								$con = mysqli_connect("localhost","gain5_wp1","E.lcb[u074R]Ub*szf.11[(2')","gains_db_wp1"); 
+// 								//on connection failure, throw an error
+// 								if(!$con) {  
+// 								die('Could not connect: '.mysql_error()); 
+// 								} 
+// 								$sql = "INSERT INTO `gains_db_wp1`.`messages` ( `name` , `email`, `message` ) VALUES ( '$name','$email','$message')"; 
+// 								mysqli_query($con,$sql); 
+
+//                 mail($admin_email, $subject, $comment, $headers);
                 
-                echo "<p><span class='glyphicon glyphicon-thumbs-up'></span> <strong>Thank you for contacting us!</strong></p>";
-                }              
-}
-add_shortcode( 'contact_form', 'add_contact_form_shortcode' );
+//                 echo "<p><span class='glyphicon glyphicon-thumbs-up'></span> <strong>Thank you for contacting us!</strong></p>";
+//                 }              
+// }
+// add_shortcode( 'contact_form', 'add_contact_form_shortcode' );
 
 
 remove_filter( 'the_content', 'wpautop' );
