@@ -20,7 +20,17 @@ Version: 2.0
 /* common */
 
 html {
-    font-size: 15px;
+    font-size: 16px;
+}
+
+::-moz-selection {
+  color: crimson;
+  background: #c1c1c1;
+}
+
+::selection {
+  color: crimson;
+  background: #c1c1c1;
 }
 
 .entry-content h1,
@@ -32,23 +42,24 @@ html {
     margin: 1rem 0;
     text-transform: capitalize;
     letter-spacing: normal;
+    font-family: Montserrat, "Helvetica Neue", sans-serif;
 }
 
 .entry-content h2 {
-    font-size: 2.5rem;
-}
-
-.entry-content h3 {
     font-size: 2rem;
 }
 
+.entry-content h3 {
+    font-size: 1.7rem;
+}
+
 .entry-content h4 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
 .entry-content h5 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -70,6 +81,7 @@ section {
 
 p {
     margin: 0 0 0.5rem 0;
+    font-size: 0.85em;
 }
 
 blockquote {
@@ -82,8 +94,8 @@ blockquote {
     font-weight: bold;
     font-style: italic;
     margin-left: 0 !important;
-    -webkit-box-shadow: -5px 5px 5px rgba(255, 255, 255, 0.05);
-    box-shadow: -5px 5px 5px rgba(255, 255, 255, 0.05);
+    -webkit-box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.3);
     display: block;
     overflow: visible;
 }
@@ -118,6 +130,14 @@ ul {
     text-align: center;
 }
 
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
 .list-block {
     padding-left: 1rem;
     margin-bottom: 1rem;
@@ -126,6 +146,7 @@ ul {
 .list-block li {
     position: relative;
     padding-left: 2rem;
+    font-size: 0.8em;
 }
 
 .list-block li:not(:last-child) {
@@ -212,6 +233,7 @@ ul {
 
 .board__body ul {
     margin-bottom: 0;
+    font-size: 0.9em;
 }
 
 .board .board__body .strong {
@@ -290,7 +312,6 @@ ul {
 
 .strong {
     font-weight: bold;
-    color: #9ac235;
 }
 
 .green {
@@ -365,6 +386,11 @@ ul {
     -webkit-box-flex: 1;
     -ms-flex: auto;
     flex: auto;
+}
+
+.row.row-col{
+      -ms-flex-direction: column;
+    flex-direction: column;  
 }
 
 .row .col {
@@ -617,9 +643,10 @@ body:not(.custom-background-image):after {
     color: #9acd32;
     padding: 1em 0.5em;
     font-size: 0.9em;
-    -webkit-transition: color 0.3s linear;
-    -o-transition: color 0.3s linear;
-    transition: color 0.3s linear;
+    font-weight: bold;
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
 }
 
 .main-navigation .primary-menu {
@@ -642,7 +669,8 @@ body:not(.custom-background-image):after {
 .main-navigation .primary-menu>li:hover a,
 .main-navigation .primary-menu>li:focus a,
 .main-navigation a:hover,
-.main-navigation a:focus {
+.main-navigation a:focus,
+.main-navigation .current-menu-item:not(.menu-item-home) > a, .main-navigation .current-menu-ancestor > a {
     color: #fff;
 }
 
@@ -679,7 +707,7 @@ body:not(.custom-background-image):after {
     font-size: 2.8rem;
     padding-bottom: 1.8rem;
     border-bottom: 3px dashed #fff;
-    text-shadow: 2px 2px 10px rgba(237, 20, 61, 0.5);
+    text-shadow: 2px 2px 10px rgba(237, 20, 61, 0.23);
     -webkit-transform: translateY(20px);
     -ms-transform: translateY(20px);
     transform: translateY(20px);
@@ -782,6 +810,10 @@ body:not(.custom-background-image):after {
     margin: 0 0px 10px 0;
 }
 
+#whatforex p.strong {
+  font-size: 1.1em;
+}
+
 #whatforex p img.angrybull {
     width: 25%;
 }
@@ -793,8 +825,28 @@ body:not(.custom-background-image):after {
 }
 
 .fourprinciples figure {
-    width: 50%;
+    width: 30%;
     margin: 0 auto 10px;
+}
+
+.fourprinciples figcaption {
+    font-size: 0.9em;
+}
+
+.fourprinciples figcaption {
+    font-size: 0.9em;
+    display: inline-block;
+    position: relative;
+}
+
+.fourprinciples figcaption:before {
+    position: absolute;
+    content: "";
+    border: 8px solid yellowgreen;
+    border-top-color: transparent;
+    width: 100%;
+    left: 0;
+    bottom: -15px;
 }
 
 .fourprinciples figure embed {
@@ -812,13 +864,46 @@ body:not(.custom-background-image):after {
     transform: scale(1.2);
 }
 
-#forex_training h5 {
-    display: inline-block;
-    background: crimson;
-    color: white;
-    font-weight: 500;
-    padding: 5px;
-    border-radius: 6px;
+.fourprinciples em {
+    display: block;
+}
+
+.img-content {
+  border-radius: 50%;
+  margin-bottom: 2em;
+}
+
+.img-content figure{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.img-content .desc{
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+
+.img-content figure img{
+  border-radius: 3px;
+    width: 500px;
+}
+
+.img-content figure h3{
+  margin: 0;
+  position: absolute;
+  right: 0px;
+  top: 0;
+      display: inline-block;
+  background: rgba(237, 20, 61, 0.52);
+  color: white;
+  font-weight: 300;
+  padding: 10px;
+}
+
+.list-block.arrow{
+
 }
 
 
@@ -922,7 +1007,6 @@ body:not(.custom-background-image):after {
 }
 
 .contact-form input[type="submit"] {
-    background: transparent;
     color: white;
     height: 50px;
     width: 167px;
@@ -939,7 +1023,7 @@ body:not(.custom-background-image):after {
 
 .contact-form input[type="submit"]:hover {
     opacity: 0.9;
-    color: #999;
+    color: #fff;
 }
 
 .contact-form .social-icons {
